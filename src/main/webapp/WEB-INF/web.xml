@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Consultorio</display-name>
+  
+  <servlet>
+      <servlet-name>CadastrarAlunoServlet</servlet-name>
+      <servlet-class>br.com.uniamerica.agenda.controller.CadastrarAlunoServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>CadastrarAlunoServlet</servlet-name>
+      <url-pattern>/html/cadastrarAluno</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+      <servlet-name>ListarAlunosServlet</servlet-name>
+      <servlet-class>br.com.uniamerica.agenda.controller.ListarAlunosServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>ListarAlunosServlet</servlet-name>
+      <url-pattern>/html/listarAlunos</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+      <servlet-name>DeletarAlunoServlet</servlet-name>
+      <servlet-class>br.com.uniamerica.agenda.controller.DeletarAlunoServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>DeletarAlunoServlet</servlet-name>
+      <url-pattern>/html/deletarAluno</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+      <servlet-name>EditarAlunoServlet</servlet-name>
+      <servlet-class>br.com.uniamerica.agenda.controller.EditarAlunoServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>EditarAlunoServlet</servlet-name>
+      <url-pattern>/html/editarAluno</url-pattern>
+  </servlet-mapping>
+   
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+</web-app>

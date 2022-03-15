@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta charset="ISO-8859-1">
+			<title>Cadastro de Aluno</title>
+			<style>
+				html{
+					width: 100%;
+					height: 100%;
+				}
+				* {
+				  margin:0;
+				  padding: 0;
+				  box-sizing: border-box;
+				  text-decoration: none;
+				  font-family: sans-serif;
+				}
+				.container{
+					min-height: 100vh;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
+				.cadastro{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					border-radius: 4px;
+					background-color: gray;
+				}
+				.field{
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: center;
+					margin: 20px;
+				}
+				.button{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 4px;
+					background-color: red;
+					width: 120px;
+					font-size: 18px;
+					text-align: center;
+					margin: 10px 0;
+					height: 30px;
+				}
+				button{
+					background-color: #52ff00;
+					border: none;
+					width: 120px;
+					height: 30px;
+					border-radius: 3px;
+					font-size: 16px;
+				}
+				a{
+					color: black;
+				}
+				button a{
+					margin: 10px;
+				}
+			</style>
+	</head>
+	<body>
+		<div class="container">
+			<form class="cadastro" action="cadastrarAluno" method="post" id="form">
+				<div class="field">
+					<label>Nome:</label>
+					<input type="text" name="nome" id="nome">
+				</div>
+				<div class="field">
+					<label>Turma:</label>
+					<input type="text" name="turma" id="turma">
+				</div>
+				<div class="button">
+					<button type="submit">CADASTRAR</button>
+				</div>
+				<div class="button">
+					<a href="./home.html">VOLTAR</a>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+	
+		var formulario = document.getElementById('form');
+	
+		formulario.addEventListener('submit',
+			function(e) {
+			    if(validandoInputs() == false) {
+			        e.preventDefault();
+			    }
+			}
+		);
+		
+		function validandoInputs()    {
+
+		    const nome = document.getElementById('nome').value.trim();
+		    const turma = document.getElementById('turma').value.trim();
+
+		    if(nome !== '' && turma !== ''){
+		        return true;
+		    }else{
+		        alert("Faltam campos a serem inseridos!");
+		        return false;
+		    }
+		}
+	
+	</script>
+</html>
